@@ -1,0 +1,67 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title {
+   clear: both;
+   margin-top: 10px;
+   margin-bottom: 15px;
+   font-family: $font__title;
+   line-height: $font__line-height-body;
+   color: $color__text-title;
+   font-weight: 700;
+   text-decoration: none;
+}
+
+.site-title{
+  @include font-size(2.25);
+}
+
+h2 {
+  @include font-size(1.5);
+}
+
+h3 {
+  @include font-size(1.125);
+}
+
+h4 {
+  @include font-size(1);
+}
+
+h5 {
+  @include font-size(0.875);
+}
+
+h6 {
+  @include font-size(0.750);
+}
+
+@include mobile-device{
+
+  h1 {
+    @include font-size(1.5);
+  }
+
+  h2 {
+    @include font-size(1.125);
+  }
+
+  h3 {
+    @include font-size(1);
+  }
+
+  h4 {
+    @include font-size(0.875);
+  }
+
+  h5 {
+    @include font-size(0.750);
+  }
+
+  h6 {
+    @include font-size(0.625);
+  }
+}

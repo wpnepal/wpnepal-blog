@@ -1,0 +1,247 @@
+# Copyright (C) 2016 WP Nepal
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPNepal Blog 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WEN Themes <info@wenthemes.com>\n"
+"Language-Team: \n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: "
+"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:1,2;_x:1,"
+"2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: ../../wpnepal-blog\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
+msgstr ""
+
+#: archive.php:39 index.php:44 search.php:36 single.php:24
+msgid "Previous"
+msgstr ""
+
+#: archive.php:40 index.php:45 search.php:37 single.php:21
+msgid "Next"
+msgstr ""
+
+#: archive.php:41 index.php:46 search.php:38
+msgid "Page"
+msgstr ""
+
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43 comments.php:64
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44 comments.php:65
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:18 functions.php:48
+msgid "Footer Menu"
+msgstr ""
+
+#: footer.php:31
+msgid "Copyright &copy;"
+msgstr ""
+
+#: footer.php:35
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:35
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:37
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: functions.php:47 header.php:64 header.php:65
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:49 header.php:47
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:113
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "Enable On"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "Disabled"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Entire Site"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Entire Site Except Blog Index Page"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "Static front page only"
+msgstr ""
+
+#: inc/customizer.php:43 inc/theme-hooks.php:61
+msgid "The future will be better tomorrow."
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "Header Tagline"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Alt Text"
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "Default Color"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "Link Hover Color"
+msgstr ""
+
+#: inc/template-tags.php:50 inc/template-tags.php:56
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:71 template-parts/content-page.php:34
+#. translators: %s: Name of current post
+msgid "Edit %s"
+msgstr ""
+
+#: inc/theme-functions.php:74
+msgid "Home"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:22
+msgid "Next post:"
+msgstr ""
+
+#: single.php:25
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:23 template-parts/content.php:39
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:34
+#. translators: %s: Name of current post.
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "WPNepal Blog"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Simple Blog theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WP Nepal"
+msgstr ""
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/theme-functions.php:25
+#. Translators: If there are characters in your language that are not supported
+#. by Montserrat, translate this to 'off'. Do not translate into your own
+#. language.
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/theme-functions.php:33
+#. Translators: If there are characters in your language that are not supported
+#. by Lato, translate this to 'off'. Do not translate into your own language.
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/theme-functions.php:41
+#. Translators: To add an additional character subset specific to your
+#. language, translate this to 'greek', 'cyrillic', 'devanagari' or
+#. 'vietnamese'. Do not translate into your own language.
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
