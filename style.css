@@ -1245,7 +1245,7 @@ a:focus {
 /* line 9, sass/site/secondary/_widgets.scss */
 .widget .widget-title, .widget .widgettitle {
   background-color: #2C3231;
-  color: #ffffff;
+  color: #fff !important;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-size: 1rem;

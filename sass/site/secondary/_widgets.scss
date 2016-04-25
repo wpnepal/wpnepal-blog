@@ -9,7 +9,7 @@
 	& .widget-title,
 	& .widgettitle {
   		background-color: $color__background-dark;
-  		color: $color__text-button;
+  		color: #fff !important;
   		font-family: $font__title;
   		@include font-size(1);
   		font-weight: 400;
