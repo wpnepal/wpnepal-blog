@@ -169,6 +169,7 @@ module.exports = function( grunt ){
 			}
 		},
 
+		// JS check.
 		jshint: {
 			options: grunt.file.readJSON('.jshintrc'),
 			all: [
@@ -176,13 +177,18 @@ module.exports = function( grunt ){
 				'!js/*.min.js'
 			]
 		},
+
+		// Uglify JS.
 		uglify: {
 			target: {
+				options: {
+					mangle: true
+				},
 				files: [{
 					expand: true,
-					cwd: 'js',
+					cwd: '<%= dirs.js %>',
 					src: ['*.js', '!*.min.js'],
-					dest: 'js',
+					dest: '<%= dirs.js %>',
 					ext: '.min.js'
 				}]
 			}
