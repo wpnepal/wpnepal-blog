@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPNepal Blog 1.0\n"
+"Project-Id-Version: WPNepal Blog 1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/wpnepal/wpnepal-blog/issues\n"
 "POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18 functions.php:48
+#: footer.php:18 functions.php:45
 msgid "Footer Menu"
 msgstr ""
 
@@ -77,15 +77,15 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr ""
 
-#: functions.php:47 header.php:64
+#: functions.php:44 header.php:64
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:49 header.php:47
+#: functions.php:46 header.php:47
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:116
 msgid "Sidebar"
 msgstr ""
 
