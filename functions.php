@@ -18,11 +18,8 @@ if ( ! function_exists( 'wpnepal_blog_setup' ) ) :
 function wpnepal_blog_setup() {
 	/*
 	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on WPNepal Blog, use a find and replace
-	 * to change 'wpnepal-blog' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wpnepal-blog', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wpnepal-blog' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -136,7 +133,7 @@ function wpnepal_blog_scripts() {
 
     wp_enqueue_style( 'genericons', get_template_directory_uri() . '/third-party/genericons/genericons' . $min . '.css', array(), '3.4.1' );
 
-	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.0.0' );
 
 	wp_enqueue_script( 'wpnepal-blog-navigation', get_template_directory_uri() . '/js/navigation' . $min . '.js', array(), '20151215', true );
 

@@ -5,17 +5,18 @@
 	$( document ).ready( function( $ ) {
 
 		// Implement go to top.
-		if ( $( '#btn-scrollup' ).length > 0 ) {
+		var $scrollup = $( '#btn-scrollup' );
+		if ( $scrollup.length > 0 ) {
 
 			$( window ).scroll( function() {
 				if ( $( this ).scrollTop() > 100 ) {
-					$( '#btn-scrollup' ).fadeIn();
+					$scrollup.fadeIn();
 				} else {
-					$( '#btn-scrollup' ).fadeOut();
+					$scrollup.fadeOut();
 				}
 			});
 
-			$( '#btn-scrollup' ).click( function() {
+			$scrollup.click( function() {
 				$( 'html, body' ).animate( { scrollTop: 0 }, 600 );
 				return false;
 			});
