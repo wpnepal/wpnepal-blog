@@ -22,3 +22,17 @@
       -o-border-radius: 30px;
       -ms-border-radius: 30px;
 }
+
+.comments-area{
+  .reply{
+    a{
+      border-bottom: 1px solid $color__background-hr;
+      padding-bottom: 5px;
+      display: inline-block;
+      margin-bottom: 15px;
+    } 
+  }
+  ol{
+    list-style-type: none;
+  }
+}

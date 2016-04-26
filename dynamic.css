@@ -1,0 +1,91 @@
+/* ================= DYNAMIC STYLE ================= */
+
+/* Site Identity Color */
+
+.site-title a,
+.site-title a:visited{
+  color: #212121; /* default #212121 */
+}
+
+/* Title Color */
+
+h1,
+h1 a,
+h1 a:visited,
+h3,
+h3 a,
+h3 a:visited,
+h4,
+h4 a,
+h4 a:visited,
+h5,
+h5 a,
+h5 a:visited,
+h6,
+h6 a,
+h6 a:visited{
+  color: #2C3231; /* default #2C3231 */
+}
+
+/* Link Color */
+  a,
+  a:visited,
+  .posted-on a,
+  .cat-links a,
+  .tags-links a,
+  .author a,
+  .comments-link a,
+  .nav-links .nav-previous a,
+  .nav-links .nav-next a{
+    color: #212121; /* default #212121 */
+  }
+
+  /* Link hover Color */
+
+  a:hover,
+  a:focus,
+  a:active,
+  .site-title a:hover,
+  .site-title a:focus,
+  .main-navigation a:hover,
+  .nav-links .nav-previous a:hover,
+  .nav-links .nav-previous a:focus,
+  .nav-links .nav-next a:hover,
+  .nav-links .nav-next a:focus,
+  .posted-on a:hover,
+  .cat-links a:hover,
+  .tags-links a:hover,
+  .author a:hover,
+  .comments-link a:hover,
+  .edit-link a:hover,
+  .edit-link a:focus,
+  .widget ul li a:hover,
+  .widget ul li a:focus,
+  .widget ul li a:active {
+    color: #6070b2; /* default #6070b2 */
+  }
+
+  /* Primary color */
+  a.scrollup,
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"],
+  .button,
+  .widget_calendar tbody a{
+  	background-color: #313C66; /* default #313C66 */
+  } 
+
+  /* Primary color hover */
+  a.scrollup:hover,
+  a.scrollup:active,
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover,
+  .button:hover,
+  .widget_calendar tbody a:hover{
+    background-color: #6070b2; /* default #6070b2 */
+  }
+
+/* ================= DYNAMIC STYLE END ================= */

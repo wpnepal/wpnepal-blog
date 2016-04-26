@@ -62,7 +62,7 @@
         </div><!-- .head-inner -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'wpnepal-blog' ); ?>">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wpnepal-blog' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
 			<?php
                 wp_nav_menu( array(
                     'theme_location' => 'primary',
