@@ -87,6 +87,12 @@ function wpnepal_blog_setup() {
         'flex-height'            => true,
         'header-text'            => false,
     ) ) );
+
+    $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+    // Editor style.
+    add_editor_style( 'css/editor-style' . $min . '.css' );
+
 }
 endif;
 add_action( 'after_setup_theme', 'wpnepal_blog_setup' );

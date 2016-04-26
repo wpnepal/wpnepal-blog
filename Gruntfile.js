@@ -90,6 +90,19 @@ module.exports = function( grunt ){
 			}
 		},
 
+		// CSS minification.
+		cssmin: {
+		  target: {
+		    files: [{
+		      expand: true,
+		      cwd: '<%= dirs.css %>',
+		      src: ['*.css', '!*.min.css'],
+		      dest: '<%= dirs.css %>',
+		      ext: '.min.css'
+		    }]
+		  }
+		},
+
 		// Copy files to deploy.
 		copy: {
 			deploy: {
@@ -192,6 +205,7 @@ module.exports = function( grunt ){
 	// Load NPM tasks to be used here
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
+	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
@@ -211,6 +225,7 @@ module.exports = function( grunt ){
 	]);
 
 	grunt.registerTask( 'build', [
+		'cssmin',
 		'uglify',
 		'sass:build',
 		'addtextdomain',
