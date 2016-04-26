@@ -6,22 +6,35 @@ module.exports = function( grunt ){
 
 		pkg: grunt.file.readJSON( 'package.json' ),
 
+		// Setting folder templates.
+		dirs: {
+			js: 'js',
+			css: 'css',
+			sass: 'sass',
+			images: 'images'
+		},
+
+		// Other options.
+		options: {
+			text_domain: 'wpnepal-blog'
+		},
+
 		// Generate POT files.
 		makepot: {
 			target: {
 				options: {
 					type: 'wp-theme',
 					domainPath: 'languages',
-					exclude: ['deploy/.*'],
+					exclude: ['deploy/.*','node_modules/.*'],
 					updateTimestamp: false,
 					potHeaders: {
-						'report-msgid-bugs-to': '',
+						'report-msgid-bugs-to': 'https://github.com/wpnepal/wpnepal-blog/issues',
+						'x-poedit-keywordslist': true,
 						'language-team': '',
 						'Language': 'en_US',
-						'X-Poedit-SearchPath-0': '../../wpnepal-blog',
+						'X-Poedit-SearchPath-0': '../../<%= pkg.name %>',
 						'plural-forms': 'nplurals=2; plural=(n != 1);',
-						'Last-Translator': 'WEN Themes <info@wenthemes.com>',
-						'x-poedit-keywordslist': '__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;',
+						'Last-Translator': 'WP Nepal <wpnepalgroup@gmail.com>',
 					}
 				}
 			}
@@ -30,7 +43,7 @@ module.exports = function( grunt ){
 		// Check textdomain errors.
 		checktextdomain: {
 			options: {
-				text_domain: 'wpnepal-blog',
+				text_domain: '<%= options.text_domain %>',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -51,28 +64,31 @@ module.exports = function( grunt ){
 			files: {
 				src: [
 					'**/*.php',
-					'!node_modules/**'
+					'!node_modules/**',
+					'!deploy/**'
 				],
 				expand: true
 			}
 		},
 
+		// Update text domain.
 		addtextdomain: {
 			options: {
-		            textdomain: 'wpnepal-blog'
-		        },
-		        target: {
-		        	files: {
-		        		src: [
-		        		'*.php',
-		        		'**/*.php',
-		        		'!node_modules/**',
-		        		'!tests/**',
-		        		'!docs/**',
-		        		]
-		        	}
-		        }
-	    },
+				textdomain: '<%= options.text_domain %>',
+				updateDomains: true
+			},
+			target: {
+				files: {
+					src: [
+					'*.php',
+					'**/*.php',
+					'!node_modules/**',
+					'!deploy/**',
+					'!tests/**'
+					]
+				}
+			}
+		},
 
 		// Copy files to deploy.
 		copy: {
@@ -87,6 +103,7 @@ module.exports = function( grunt ){
 					'!test.php',
 					'!package.json',
 					'!node_modules/**',
+					'!languages/**',
 					'!sass/**',
 					'!docs/**'
 				],
@@ -189,7 +206,8 @@ module.exports = function( grunt ){
 	]);
 
 	grunt.registerTask( 'precommit', [
-		'jshint'
+		'jshint',
+		'checktextdomain'
 	]);
 
 	grunt.registerTask( 'build', [
