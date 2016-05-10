@@ -16,6 +16,7 @@ if ( ! function_exists( 'wpnepal_blog_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function wpnepal_blog_setup() {
+
 	/*
 	 * Make theme available for translation.
 	 */
@@ -78,16 +79,25 @@ function wpnepal_blog_setup() {
 
 	// Set up the WordPress core custom header feature.
     add_theme_support( 'custom-header', apply_filters( 'wpnepal_blog_custom_header_args', array(
-        'default-image'          => '',
-        'width'                  => 1200,
-        'height'                 => 380,
-        'flex-height'            => true,
-        'header-text'            => false,
+		'default-image' => '',
+		'width'         => 1200,
+		'height'        => 380,
+		'flex-height'   => true,
+		'header-text'   => true,
     ) ) );
 
-    $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+    /*
+     * Enable support for custom logo.
+     */
+    add_theme_support( 'custom-logo' );
+
+    /*
+     * Enable support for selective refresh of widgets in Customizer.
+     */
+    add_theme_support( 'customize-selective-refresh-widgets' );
 
     // Editor style.
+    $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
     add_editor_style( 'css/editor-style' . $min . '.css' );
 
 }

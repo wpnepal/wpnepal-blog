@@ -57,7 +57,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18 functions.php:45
+#: footer.php:18 functions.php:46
 msgid "Footer Menu"
 msgstr ""
 
@@ -77,15 +77,15 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr ""
 
-#: functions.php:44 header.php:64
+#: functions.php:45 header.php:65
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:46 header.php:47
+#: functions.php:47 header.php:48
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:126
 msgid "Sidebar"
 msgstr ""
 
