@@ -145,3 +145,20 @@ if ( ! function_exists( 'wpnepal_blog_post_thumbnail' ) ) :
         <?php endif;
     }
 endif;
+
+if ( ! function_exists( 'wpnepal_blog_the_custom_logo' ) ) :
+
+	/**
+	 * Render logo.
+	 *
+	 * @since 1.0.0
+	 */
+	function wpnepal_blog_the_custom_logo() {
+
+		if ( function_exists( 'the_custom_logo' ) ) {
+			the_custom_logo();
+		}
+
+	}
+
+endif;
