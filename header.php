@@ -72,6 +72,7 @@
                 ) );
             ?>
 		</nav><!-- #site-navigation -->
+
 		<?php do_action( 'wpnepal_blog_action_custom_header' ); ?>
 	</header><!-- #masthead -->
 

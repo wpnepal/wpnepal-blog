@@ -19,6 +19,12 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+
+@include placeholder {
+    font-style:italic;
+    color: $color__background-hr;
+}
+
 .logged-in.admin-bar .ab-top-menu a,
 .logged-in.admin-bar .ab-top-menu a > p{
   	color: inherit !important;
@@ -29,7 +35,8 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
-a.scrollup {
+a.scrollup,
+a.scrollup:visited {
   float: right;
   bottom: 50px;
   display: none;
@@ -39,17 +46,15 @@ a.scrollup {
   z-index: 9999;
   text-decoration: none;
   color: $color__text-white;
-  background-color: $color__background-button;
+  background-color: $color__background-button-hover;
   text-align: center;
   @include border-radius(3px);
   @include transition(color 0.5s);
-  &:focus{
-    color: $color__text-white;
-  }
   &:hover,
+  &:focus,
   &:active{
-    background-color: $color__background-button-hover;
     color: $color__text-white;
+    background-color: $color__background-button;
   }
   span{
     @include font-size(2);
@@ -66,7 +71,6 @@ a.scrollup {
 .head-inner{
 	@include clearfix();
 	width: $size__site-full;
-  margin-bottom: 15px;
   @include mobile-device(){
     text-align: center;
   }
@@ -92,31 +96,36 @@ a.scrollup {
 }
 
 .head-img{
-  margin-bottom: 2.50em;
-  position: relative;
-  @include clearfix();
+  float: left;
   width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: #313131;
+  color: #ffffff;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: hidden;
+  height: 28em;
+  text-align: center;
+  display: table;
+  margin-bottom: 40px;
+  @include mobile-device(){
+    height: 15em;
+  }
   &:after{
     @include clearfix-after();
   }
-  .head-titlecontainer{
-    display: table;
-    height: 100%;
-    text-align: center;
+  
+  .head-titlecontainer {
     width: 100%;
-    position: absolute;
-    top: 140px;
-    bottom: 0;
     margin: auto;
-    @include mobile-device(){
-       position: static;
-       background-color: $color__background-dark;
-    }
+    display: table-cell;
+    vertical-align: middle;
+
     .head-title {
-       display: inline;
-       height: 100%;
-       width: 100%;
-       max-width: 300px;
+       display: inline-block;
+       width: 60%;
        padding: 15px;
        vertical-align: middle;
        background-color: rgba(0,0,0,0.5);
@@ -131,3 +140,6 @@ a.scrollup {
     }
   }
 }
+
+
+// ========== HAPPY STYLING ========== //

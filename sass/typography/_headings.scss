@@ -1,3 +1,14 @@
+%heading{
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-family: $font__title;
+  line-height: $font__line-height-body;
+  color: $color__text-title;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -5,17 +16,12 @@ h4,
 h5,
 h6,
 .site-title {
-   clear: both;
-   margin-top: 10px;
-   margin-bottom: 15px;
-   font-family: $font__title;
-   line-height: $font__line-height-body;
-   color: $color__text-title;
-   font-weight: 700;
-   text-decoration: none;
+  @extend %heading;
 }
 
 .site-title{
+  margin-top: 5px;
+  margin-bottom: 0;
   @include font-size(2.25);
 }
 

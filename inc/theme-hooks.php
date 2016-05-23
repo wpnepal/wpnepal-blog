@@ -56,8 +56,7 @@ function wpnepal_blog_add_custom_header() {
 		$alt_text = get_bloginfo( 'name', 'display' );
 	}
     ?>
-    <section class="head-img">
-    	<img src="<?php echo get_header_image(); ?>" alt="<?php echo esc_attr( $alt_text ); ?>" />
+    <section class="head-img" style="background-image: url(<?php echo get_header_image(); ?>" alt="<?php echo esc_attr( $alt_text ); ?>);">
     	<?php $wpnepal_blog_custom_header_tagline = get_theme_mod( 'wpnepal_blog_custom_header_tagline', __( 'The future will be better tomorrow.', 'wpnepal-blog' ) ); ?>
     	<?php if ( ! empty( $wpnepal_blog_custom_header_tagline ) ) : ?>
 	    	<div class="head-titlecontainer"><div class="head-title"><?php echo esc_html( $wpnepal_blog_custom_header_tagline ); ?></div></div>

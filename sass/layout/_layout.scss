@@ -1,15 +1,26 @@
-.site-header,
-.site-content{
+%site-content-width{
 	max-width: $size__site-container;
 	width: $size__site-full;
 	background-color: $color__background-body;
   	@include center-block;
     padding-left: 15px;
     padding-right: 15px;
+    @include mf-small-device(){
+    	padding-left: 30px;
+    	padding-right: 30px;
+    }
 }
 
-.content-area,
-.site-branding {
+.site-header{
+	@extend %site-content-width;
+	margin-top: 20px;
+}
+
+.site-content{
+	@extend %site-content-width;
+}
+
+.content-area {
 	width: $size__site-main;
 
 	@media (max-width: 767px) {
@@ -17,11 +28,24 @@
 	}
 }
 
-.site-content .widget-area,
-.header-widget {
-	width: $size__site-sidebar;
+.site-content {
+	.widget-area{
+		width: $size__site-sidebar;
 
+		@media (max-width: 767px) {
+			width: $size__site-full;
+		}
+	}
+}
+
+%width-half-desktop{
+	width: 50%;
 	@media (max-width: 767px) {
 		width: $size__site-full;
 	}
+}
+
+.site-branding,
+.header-widget {
+	@extend %width-half-desktop;
 }

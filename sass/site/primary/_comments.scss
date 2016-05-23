@@ -3,24 +3,30 @@
 	padding-left: 0; 
 }
 
-.comment-content a {
-  word-wrap: break-word;
+.comment-content {
+  a{
+    word-wrap: break-word;
+  }
+}
+
+body:not(.single) .comment-content {
+  ol{
+    list-style-type: none;
+  }
 }
 
 .bypostauthor {
   display: block;
 }
 
-.comment-author .avatar {
+.comment-author {
+  .avatar{
     float: left;
     height: 3em;
     width: 3em;
     margin-right: 0.8em;
-    border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -o-border-radius: 30px;
-      -ms-border-radius: 30px;
+    @include border-radius(30px);
+  }
 }
 
 .comments-area{
@@ -31,8 +37,5 @@
       display: inline-block;
       margin-bottom: 15px;
     } 
-  }
-  ol{
-    list-style-type: none;
   }
 }
