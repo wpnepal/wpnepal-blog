@@ -27,13 +27,46 @@ textarea,
 	font-family: $font__main;
 	background-color: $color__background-screen;
 	outline: 0;
-	width: 100%;
 	margin-bottom: 15px;
-
 	&:focus {
 		color: $color__text-input-focus;
 		background-color: $color__background-body; 
 		-webkit-appearance: none;
+	}
+	
+	.comment-form &{
+		width: 100%;
+	}
+
+	@include mini-mobile-device(){
+		width: 100%;
+	}
+}
+
+input[type="password"],
+input[type="submit"],
+input[type="submit"].wpcf7-form-control{
+	width: auto;
+	@include mobile-device(){
+		width: 100%;
+		body.search &,
+		body.error404 & {
+			width: auto;
+		}
+	}
+	@include mini-mobile-device(){
+		body.search &,
+		body.error404 & {
+			width: 100%;
+		}	
+	}
+}
+
+body.search,
+body.error404 {
+	input[type="submit"].search-submit{
+		padding: 12px 20px 13px 20px;
+		@include border-radius(0);
 	}
 }
 
@@ -52,7 +85,7 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	padding: 8px 5px 8px 15px;
+	padding: 7px 5px 8px 15px;
 }
 
 input[type="search"] {
@@ -94,7 +127,6 @@ optgroup {
 
 select{
 	border: 1px solid $color__border-input;
-
 	&:focus{
     	outline: none;
 	}

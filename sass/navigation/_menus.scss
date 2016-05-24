@@ -1,14 +1,14 @@
 .main-navigation {
+	background-color: $color__background-body;
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
-	background-color: $color__background-body;
 	margin-bottom: 1.875em;
+	width: 100%;
 
 	@media screen and (min-width: 37.5em){
-		border-top: 3px solid $color__background-hr;
 		border-bottom: 3px solid $color__background-hr;
+		border-top: 3px solid $color__background-hr;
 	}
 
 	ul {
@@ -25,8 +25,8 @@
 			position: absolute;
 			top: 2.7em;
 			left: -999em;
-			z-index: 99999;
 			background-color: $color__background-pre;
+			z-index: 99999;
 
 			ul {
 				left: -999em;
@@ -38,6 +38,7 @@
 				&:first-child{
 					border-top: none;
 				}
+				
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -48,7 +49,7 @@
 				width: 200px;
 			}
 
-			:hover > a,
+			&:hover > a,
 			.focus > a {
 			}
 
@@ -74,7 +75,8 @@
 		}
 	}
 
-	a {
+	a,
+	a:visited {
 		display: block;
 		text-decoration: none;
 		color: $color__text-menu;
@@ -83,7 +85,9 @@
 		font-weight: 400;
 		padding: 9px 1em 10px;
 
-		&:hover{
+		&:hover,
+		&:focus,
+		&:active{
 			color: $color__link-hover;
 		}
 	}
@@ -127,14 +131,7 @@
 	}
 
 	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+		margin-bottom: 30px;
 	}
 }
 
