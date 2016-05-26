@@ -147,8 +147,6 @@ function wpnepal_blog_scripts() {
 
 	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.1' );
 
-	wp_enqueue_script( 'wpnepal-blog-navigation', get_template_directory_uri() . '/js/navigation' . $min . '.js', array(), '20151215', true );
-
     wp_enqueue_script( 'wpnepal-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $min . '.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'wpnepal-blog-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery' ), '1.1', true );
