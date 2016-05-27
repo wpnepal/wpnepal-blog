@@ -60,19 +60,24 @@
                     </nav><!-- #social-navigation -->
                 </div><!-- .header-widget -->
             <?php endif; ?>
+
+
         </div><!-- .head-inner -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'wpnepal-blog' ); ?>">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
-			<?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'menu_id'        => 'primary-menu',
-                    'fallback_cb'    => 'wpnepal_blog_primary_navigation_fallback',
-                ) );
-            ?>
-		</nav><!-- #site-navigation -->
+        <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
 
+        <div id="site-header-menu" class="site-header-menu">
+            <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'wpnepal-blog' ); ?>">
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'primary-menu',
+                        'menu_class'     => 'primary-menu',
+                        'fallback_cb'    => 'wpnepal_blog_primary_navigation_fallback',
+                    ) );
+                ?>
+            </nav><!-- #site-navigation -->
+        </div><!-- site-header-menu -->
 		<?php do_action( 'wpnepal_blog_action_custom_header' ); ?>
 	</header><!-- #masthead -->
 
