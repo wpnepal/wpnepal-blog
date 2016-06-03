@@ -34,7 +34,7 @@ module.exports = function( grunt ){
 						'Language': 'en_US',
 						'X-Poedit-SearchPath-0': '../../<%= pkg.name %>',
 						'plural-forms': 'nplurals=2; plural=(n != 1);',
-						'Last-Translator': 'WP Nepal <wpnepalgroup@gmail.com>',
+						'Last-Translator': 'WP Nepal <wpnepalgroup@gmail.com>'
 					}
 				}
 			}
@@ -101,6 +101,32 @@ module.exports = function( grunt ){
 		      ext: '.min.css'
 		    }]
 		  }
+		},
+
+		// Image minification.
+		imagemin: {
+			png: {
+				options: {
+					optimizationLevel: 3
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= dirs.images %>',
+					src: ['*.png'],
+					dest: '<%= dirs.images %>'
+				}]
+			},
+			jpg: {
+				options: {
+					progressive: true
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= dirs.images %>',
+					src: ['*.jpg'],
+					dest: '<%= dirs.images %>'
+				}]
+			}
 		},
 
 		// Copy files to deploy.
@@ -173,6 +199,7 @@ module.exports = function( grunt ){
 		jshint: {
 			options: grunt.file.readJSON('.jshintrc'),
 			all: [
+				'Gruntfile.js',
 				'js/*.js',
 				'!js/*.min.js'
 			]
@@ -192,19 +219,6 @@ module.exports = function( grunt ){
 					ext: '.min.js'
 				}]
 			}
-		},
-
-		// Compress files.
-		compress: {
-			deploy: {
-				expand: true,
-				options: {
-					archive: 'deploy/<%= pkg.name %>.zip'
-				},
-				cwd: 'deploy/<%= pkg.name %>/',
-				src: ['**/*'],
-				dest: '<%= pkg.name %>/'
-			}
 		}
 	});
 
@@ -212,13 +226,13 @@ module.exports = function( grunt ){
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+	grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -232,16 +246,21 @@ module.exports = function( grunt ){
 
 	grunt.registerTask( 'build', [
 		'cssmin',
+		'imagemin',
 		'uglify',
 		'sass:build',
 		'addtextdomain',
 		'makepot'
 	]);
 
+	grunt.registerTask( 'textdomain', [
+		'addtextdomain',
+		'makepot'
+	]);
+
 	grunt.registerTask( 'deploy', [
 		'clean:deploy',
-		'copy:deploy',
-		'compress:deploy'
+		'copy:deploy'
 	]);
 
 };

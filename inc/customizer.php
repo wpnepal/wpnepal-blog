@@ -18,7 +18,7 @@ function wpnepal_blog_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'wpnepal_blog_custom_header_status',
 		array(
-		'default'           => 'disabled',
+		'default'           => 'entire-site',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'wpnepal_blog_sanitize_select',
 		)
