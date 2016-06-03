@@ -77,14 +77,23 @@ function wpnepal_blog_setup() {
 
 	// Set up the WordPress core custom header feature.
     add_theme_support( 'custom-header', apply_filters( 'wpnepal_blog_custom_header_args', array(
-		'default-image'      => '',
+		'default-image'      => get_template_directory_uri() . '/images/header-image.png',
 		'default-text-color' => '#565656',
-		'width'              => 1200,
-		'height'             => 380,
+		'width'              => 1170,
+		'height'             => 450,
 		'flex-height'        => true,
 		'header-text'        => true,
 		'wp-head-callback'   => 'wpnepal_blog_header_style',
     ) ) );
+
+    // Register default custom header image.
+    register_default_headers( array(
+    	'enjoy-nature' => array(
+    		'url'           => '%s/images/header-image.png',
+    		'thumbnail_url' => '%s/images/header-image.png',
+    		'description'   => _x( 'Nature', 'header image description', 'wpnepal-blog' ),
+    	),
+    ) );
 
     /*
      * Enable support for custom logo.

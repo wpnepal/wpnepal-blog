@@ -57,7 +57,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18 functions.php:46
+#: footer.php:18 functions.php:44
 msgid "Footer Menu"
 msgstr ""
 
@@ -77,15 +77,15 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr ""
 
-#: functions.php:45 header.php:65
+#: functions.php:43 header.php:70
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:47 header.php:48
+#: functions.php:45 header.php:48
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:135
 msgid "Sidebar"
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Static front page only"
 msgstr ""
 
-#: inc/customizer.php:43 inc/theme-hooks.php:61
+#: inc/customizer.php:43 inc/theme-hooks.php:60
 msgid "The future will be better tomorrow."
 msgstr ""
 
@@ -222,6 +222,11 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
+
+#: functions.php:94
+msgctxt "header image description"
+msgid "Nature"
+msgstr ""
 
 #: inc/theme-functions.php:25
 #. Translators: If there are characters in your language that are not supported

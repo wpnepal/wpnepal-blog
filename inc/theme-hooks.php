@@ -77,7 +77,7 @@ function wpnepal_blog_check_custom_header_status( $status ) {
 		global $post, $wp_query;
 
 		// Custom header status.
-		$wpnepal_blog_custom_header_status = get_theme_mod( 'wpnepal_blog_custom_header_status' );
+		$wpnepal_blog_custom_header_status = get_theme_mod( 'wpnepal_blog_custom_header_status', 'entire-site' );
 
 		// Get Page ID outside Loop.
 		$page_id = $wp_query->get_queried_object_id();
