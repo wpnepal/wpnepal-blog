@@ -15,7 +15,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-        <?php wpnepal_blog_post_thumbnail(); ?>
+		<?php wpnepal_blog_post_thumbnail(); ?>
 		<?php
 			the_content();
 

@@ -1,5 +1,5 @@
 /* jshint node:true */
-module.exports = function( grunt ){
+module.exports = function( grunt ) {
 	'use strict';
 
 	grunt.initConfig({
@@ -25,7 +25,7 @@ module.exports = function( grunt ){
 				options: {
 					type: 'wp-theme',
 					domainPath: 'languages',
-					exclude: ['deploy/.*','node_modules/.*'],
+					exclude: ['deploy/.*', 'node_modules/.*'],
 					updateTimestamp: false,
 					potHeaders: {
 						'report-msgid-bugs-to': 'https://github.com/wpnepal/wpnepal-blog/issues',
@@ -92,15 +92,15 @@ module.exports = function( grunt ){
 
 		// CSS minification.
 		cssmin: {
-		  target: {
-		    files: [{
-		      expand: true,
-		      cwd: '<%= dirs.css %>',
-		      src: ['*.css', '!*.min.css'],
-		      dest: '<%= dirs.css %>',
-		      ext: '.min.css'
-		    }]
-		  }
+			target: {
+				files: [{
+					expand: true,
+					cwd: '<%= dirs.css %>',
+					src: ['*.css', '!*.min.css'],
+					dest: '<%= dirs.css %>',
+					ext: '.min.css'
+				}]
+			}
 		},
 
 		// Image minification.
@@ -197,7 +197,7 @@ module.exports = function( grunt ){
 
 		// JS check.
 		jshint: {
-			options: grunt.file.readJSON('.jshintrc'),
+			options: grunt.file.readJSON( '.jshintrc' ),
 			all: [
 				'Gruntfile.js',
 				'js/*.js',

@@ -32,11 +32,11 @@ get_header(); ?>
 
 			endwhile;
 
-            the_posts_pagination( array(
-                'prev_text'          => __( 'Previous', 'wpnepal-blog' ),
-                'next_text'          => __( 'Next', 'wpnepal-blog' ),
-                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'wpnepal-blog' ) . ' </span>',
-            ) );
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous', 'wpnepal-blog' ),
+				'next_text'          => __( 'Next', 'wpnepal-blog' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'wpnepal-blog' ) . ' </span>',
+			) );
 
 		else :
 

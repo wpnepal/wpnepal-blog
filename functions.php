@@ -8,108 +8,108 @@
  */
 
 if ( ! function_exists( 'wpnepal_blog_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function wpnepal_blog_setup() {
-
-	// Make theme available for translation.
-	load_theme_textdomain( 'wpnepal-blog' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function wpnepal_blog_setup() {
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-        'primary' => esc_html__( 'Primary Menu', 'wpnepal-blog' ),
-        'footer'  => esc_html__( 'Footer Menu', 'wpnepal-blog' ),
-        'social'  => esc_html__( 'Social Menu', 'wpnepal-blog' ),
-	) );
+		// Make theme available for translation.
+		load_theme_textdomain( 'wpnepal-blog' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-    // Set up the WordPress core custom background feature.
-    add_theme_support( 'custom-background', apply_filters( 'wpnepal_blog_custom_background_args', array(
-        'default-color' => 'ffffff',
-        'default-image' => '',
-    ) ) );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	// Set up the WordPress core custom header feature.
-    add_theme_support( 'custom-header', apply_filters( 'wpnepal_blog_custom_header_args', array(
-		'default-image'      => get_template_directory_uri() . '/images/header-image.png',
-		'default-text-color' => '#565656',
-		'width'              => 1170,
-		'height'             => 450,
-		'flex-height'        => true,
-		'header-text'        => true,
-		'wp-head-callback'   => 'wpnepal_blog_header_style',
-    ) ) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' => esc_html__( 'Primary Menu', 'wpnepal-blog' ),
+			'footer'  => esc_html__( 'Footer Menu', 'wpnepal-blog' ),
+			'social'  => esc_html__( 'Social Menu', 'wpnepal-blog' ),
+		) );
 
-    // Register default custom header image.
-    register_default_headers( array(
-    	'enjoy-nature' => array(
-    		'url'           => '%s/images/header-image.png',
-    		'thumbnail_url' => '%s/images/header-image.png',
-    		'description'   => _x( 'Nature', 'header image description', 'wpnepal-blog' ),
-    	),
-    ) );
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-    /*
-     * Enable support for custom logo.
-     */
-    add_theme_support( 'custom-logo' );
+		/*
+		 * Enable support for Post Formats.
+		 * See https://developer.wordpress.org/themes/functionality/post-formats/
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+		) );
 
-    /*
-     * Enable support for selective refresh of widgets in Customizer.
-     */
-    add_theme_support( 'customize-selective-refresh-widgets' );
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'wpnepal_blog_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
 
-    // Editor style.
-    $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-    add_editor_style( 'css/editor-style' . $min . '.css' );
+		// Set up the WordPress core custom header feature.
+		add_theme_support( 'custom-header', apply_filters( 'wpnepal_blog_custom_header_args', array(
+			'default-image'      => get_template_directory_uri() . '/images/header-image.png',
+			'default-text-color' => '#565656',
+			'width'              => 1170,
+			'height'             => 450,
+			'flex-height'        => true,
+			'header-text'        => true,
+			'wp-head-callback'   => 'wpnepal_blog_header_style',
+		) ) );
 
-}
+		// Register default custom header image.
+		register_default_headers( array(
+			'enjoy-nature' => array(
+			'url'           => '%s/images/header-image.png',
+			'thumbnail_url' => '%s/images/header-image.png',
+			'description'   => _x( 'Nature', 'header image description', 'wpnepal-blog' ),
+			),
+		) );
+
+		/*
+		 * Enable support for custom logo.
+		 */
+		add_theme_support( 'custom-logo' );
+
+		/*
+		 * Enable support for selective refresh of widgets in Customizer.
+		 */
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Editor style.
+		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		add_editor_style( 'css/editor-style' . $min . '.css' );
+
+	}
 endif;
 add_action( 'after_setup_theme', 'wpnepal_blog_setup' );
 
@@ -150,15 +150,20 @@ function wpnepal_blog_scripts() {
 
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-    wp_enqueue_style( 'wpnepal-blog-google-fonts', wpnepal_blog_fonts_url(), array(), null );
+	wp_enqueue_style( 'wpnepal-blog-google-fonts', wpnepal_blog_fonts_url(), array(), null );
 
-    wp_enqueue_style( 'genericons', get_template_directory_uri() . '/third-party/genericons/genericons' . $min . '.css', array(), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/third-party/genericons/genericons' . $min . '.css', array(), '3.4.1' );
 
 	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.1' );
 
-    wp_enqueue_script( 'wpnepal-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $min . '.js', array(), '20151215', true );
+	wp_enqueue_script( 'wpnepal-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $min . '.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'wpnepal-blog-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery' ), '1.1', true );
+
+	wp_localize_script( 'wpnepal-blog-custom', 'WPNepalBlogScreenReaderText', array(
+		'expand'   => __( 'expand child menu', 'wpnepal-blog' ),
+		'collapse' => __( 'collapse child menu', 'wpnepal-blog' ),
+	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

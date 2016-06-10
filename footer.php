@@ -14,23 +14,21 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-        <?php if ( has_nav_menu( 'footer' ) ) : ?>
-            <nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'wpnepal-blog' ); ?>">
-                <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'footer',
-                        'menu_class'     => 'footer-menu',
-                        'depth'          => 1,
-                     ) );
-                ?>
-            </nav><!-- .footer-navigation -->
-        <?php endif; ?>
+		<?php if ( has_nav_menu( 'footer' ) ) : ?>
+			<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'wpnepal-blog' ); ?>">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'footer',
+						'menu_class'     => 'footer-menu',
+						'depth'          => 1,
+					 ) );
+				?>
+			</nav><!-- .footer-navigation -->
+		<?php endif; ?>
 
-        <div class="copyright">
-            <p>
-                <?php esc_attr_e( 'Copyright &copy;', 'wpnepal-blog' ); ?>&nbsp;<?php echo date( 'Y' ); ?>&nbsp;<?php printf( '<a class="site-link" href="%s" rel="home">%s</a>', esc_url( home_url() ), get_bloginfo( 'name' ) ); ?>
-            </p>
-        </div><!-- .copyright -->
+		<div class="copyright">
+			<p><?php esc_attr_e( 'Copyright &copy;', 'wpnepal-blog' ); ?>&nbsp;<?php echo date_i18n( 'Y' ); ?>&nbsp;<?php printf( '<a class="site-link" href="%s" rel="home">%s</a>', esc_url( home_url( '/' ) ), get_bloginfo( 'name' ) ); ?></p>
+		</div><!-- .copyright -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpnepal-blog' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wpnepal-blog' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

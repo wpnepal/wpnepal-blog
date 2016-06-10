@@ -20,15 +20,12 @@
 				$( 'html, body' ).animate( { scrollTop: 0 }, 600 );
 				return false;
 			});
-
 		}
-
 	});
-
 } )( jQuery );
 
+/* global WPNepalBlogScreenReaderText */
 
-/* global screenReaderText */
 /**
  * Theme functions file.
  *
@@ -36,10 +33,9 @@
  */
 
 ( function( $ ) {
-	var body, masthead, menuToggle, siteNavigation, siteHeaderMenu;
+	var masthead, menuToggle, siteNavigation, siteHeaderMenu;
 
 	function initMainNavigation( container ) {
-		var screenReaderText = $('.screen-reader-text');
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', {
@@ -47,7 +43,7 @@
 			'aria-expanded': false
 		} ).append( $( '<span />', {
 			'class': 'screen-reader-text',
-			text: screenReaderText.expand
+			text: WPNepalBlogScreenReaderText.expand
 		} ) );
 
 		container.find( '.menu-item-has-children > a' ).after( dropdownToggle );
@@ -70,7 +66,7 @@
 			// jscs:disable
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 			// jscs:enable
-			screenReaderSpan.text( screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+			screenReaderSpan.text( screenReaderSpan.text() === WPNepalBlogScreenReaderText.expand ? WPNepalBlogScreenReaderText.collapse : WPNepalBlogScreenReaderText.expand );
 		} );
 	}
 	initMainNavigation( $( '.main-navigation' ) );
@@ -132,28 +128,4 @@
 			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
 		} );
 	} )();
-
-	// Add the default ARIA attributes for the menu toggle and the navigations.
-	function onResizeARIA() {
-		if ( window.innerWidth < 910 ) {
-			if ( menuToggle.hasClass( 'toggled-on' ) ) {
-				menuToggle.attr( 'aria-expanded', 'true' );
-			} else {
-				menuToggle.attr( 'aria-expanded', 'false' );
-			}
-
-			if ( siteHeaderMenu.hasClass( 'toggled-on' ) ) {
-				siteNavigation.attr( 'aria-expanded', 'true' );
-			} else {
-				siteNavigation.attr( 'aria-expanded', 'false' );
-			}
-
-			menuToggle.attr( 'aria-controls', 'site-navigation social-navigation' );
-		} else {
-			menuToggle.removeAttr( 'aria-expanded' );
-			siteNavigation.removeAttr( 'aria-expanded' );
-			menuToggle.removeAttr( 'aria-controls' );
-		}
-	}
-	
 } )( jQuery );

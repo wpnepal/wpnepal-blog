@@ -1,0 +1,10 @@
+{
+    "preset": "wordpress",
+    "fileExtensions": [ ".js" ],
+    "excludeFiles": [
+    	"js/skip-link-focus-fix.js",
+    	"js/skip-link-focus-fix.min.js",
+    	"js/customizer.min.js",
+    	"js/custom.min.js"
+    ]
+}

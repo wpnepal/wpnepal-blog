@@ -61,32 +61,40 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: footer.php:31
+#: footer.php:30
 msgid "Copyright &copy;"
 msgstr ""
 
-#: footer.php:35
+#: footer.php:33
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:35
+#: footer.php:33
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:35
 msgid "%1$s by %2$s"
 msgstr ""
 
-#: functions.php:43 header.php:70
+#: functions.php:43 header.php:66
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:45 header.php:48
+#: functions.php:45 header.php:45
 msgid "Social Menu"
 msgstr ""
 
 #: functions.php:135
 msgid "Sidebar"
+msgstr ""
+
+#: functions.php:164
+msgid "expand child menu"
+msgstr ""
+
+#: functions.php:165
+msgid "collapse child menu"
 msgstr ""
 
 #: header.php:26
@@ -195,11 +203,11 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:23 template-parts/content.php:39
+#: template-parts/content-page.php:23 template-parts/content.php:38
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:34
+#: template-parts/content.php:33
 #. translators: %s: Name of current post.
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

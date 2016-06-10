@@ -14,17 +14,17 @@
  * @return array
  */
 function wpnepal_blog_body_classes( $classes ) {
-    // Adds a class of group-blog to blogs with more than 1 published author.
-    if ( is_multi_author() ) {
-        $classes[] = 'group-blog';
-    }
+	// Adds a class of group-blog to blogs with more than 1 published author.
+	if ( is_multi_author() ) {
+		$classes[] = 'group-blog';
+	}
 
-    // Adds a class of hfeed to non-singular pages.
-    if ( ! is_singular() ) {
-        $classes[] = 'hfeed';
-    }
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
 
-    return $classes;
+	return $classes;
 }
 add_filter( 'body_class', 'wpnepal_blog_body_classes' );
 
@@ -35,7 +35,7 @@ add_filter( 'body_class', 'wpnepal_blog_body_classes' );
  */
 function wpnepal_blog_add_go_to_top() {
 
-    echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="genericon genericon-collapse"></span></a>';
+	echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="genericon genericon-collapse"></span></a>';
 
 }
 add_action( 'wp_footer', 'wpnepal_blog_add_go_to_top' );
@@ -55,25 +55,30 @@ function wpnepal_blog_add_custom_header() {
 	if ( empty( $alt_text ) ) {
 		$alt_text = get_bloginfo( 'name', 'display' );
 	}
-    ?>
-    <section class="head-img" style="background-image: url(<?php echo get_header_image(); ?>" alt="<?php echo esc_attr( $alt_text ); ?>);">
-    	<?php $wpnepal_blog_custom_header_tagline = get_theme_mod( 'wpnepal_blog_custom_header_tagline', __( 'The future will be better tomorrow.', 'wpnepal-blog' ) ); ?>
-    	<?php if ( ! empty( $wpnepal_blog_custom_header_tagline ) ) : ?>
-	    	<div class="head-titlecontainer"><div class="head-title"><?php echo esc_html( $wpnepal_blog_custom_header_tagline ); ?></div></div>
-    	<?php endif ?>
-    </section>
-    <?php
+	?>
+	<section class="head-img" style="background-image: url(<?php echo esc_url( get_header_image() ); ?>" alt="<?php echo esc_attr( $alt_text ); ?>);">
+		<?php $wpnepal_blog_custom_header_tagline = get_theme_mod( 'wpnepal_blog_custom_header_tagline', __( 'The future will be better tomorrow.', 'wpnepal-blog' ) ); ?>
+		<?php if ( ! empty( $wpnepal_blog_custom_header_tagline ) ) : ?>
+			<div class="head-titlecontainer"><div class="head-title"><?php echo esc_html( $wpnepal_blog_custom_header_tagline ); ?></div></div>
+		<?php endif; ?>
+	</section>
+	<?php
 
 }
 add_action( 'wpnepal_blog_action_custom_header', 'wpnepal_blog_add_custom_header' );
 
-
+/**
+ * Status of custom header
+ *
+ * @since 1.0.0
+ * @param bool $status Status.
+ * @return bool Modified status.
+ */
 function wpnepal_blog_check_custom_header_status( $status ) {
 
 	if ( ! get_header_image() ) {
 		$status = false;
-	}
-	else {
+	} else {
 		global $post, $wp_query;
 
 		// Custom header status.
@@ -121,6 +126,11 @@ function wpnepal_blog_check_custom_header_status( $status ) {
 
 add_filter( 'wpnepal_blog_filter_custom_header_status', 'wpnepal_blog_check_custom_header_status' );
 
+/**
+ * Add custom style.
+ *
+ * @since 1.0.0
+ */
 function wpnepal_blog_add_custom_styling() {
 
 	$css = '';
@@ -171,15 +181,15 @@ if ( ! function_exists( 'wpnepal_blog_header_style' ) ) :
 		<style type="text/css">
 		<?php
 			// Has the text been hidden?
-			if ( ! display_header_text() ) :
+		if ( ! display_header_text() ) :
 		?>
-			.site-title,
-			.site-description {
-				position: absolute;
-				clip: rect(1px, 1px, 1px, 1px);
-			}
+		.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}
 		<?php
-			// If the user has set a custom color for the text use that.
+		// If the user has set a custom color for the text use that.
 			else :
 		?>
 			.site-title a,
