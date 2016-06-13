@@ -517,6 +517,126 @@ a.scrollup:visited span {
   padding: 7px;
 }
 
+.social-section {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .social-section {
+    text-align: right;
+  }
+}
+.social-section ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.social-section li {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.social-section a {
+  background-color: #c8c8c8;
+  color: #fff !important;
+  display: inline-block;
+  font-family: "Genericons";
+  font-weight: 400;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  text-decoration: inherit;
+  width: 38px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.social-section a:hover {
+  background-color: #2C3E8A;
+  color: #fff;
+}
+.social-section a:before {
+  font-family: "Genericons";
+  font-size: 16px;
+  font-size: 1rem;
+}
+.social-section a[href*="github.com"]:before {
+  content: "\f200";
+}
+.social-section a[href*="dribbble.com"]:before {
+  content: "\f201";
+}
+.social-section a[href*="twitter.com"]:before {
+  content: "\f202";
+}
+.social-section a[href*="facebook.com"]:before {
+  content: "\f204";
+}
+.social-section a[href*="wordpress.com"]:before,
+.social-section a[href*="wordpress.org"]:before {
+  content: "\f205";
+}
+.social-section a[href*="plus.google.com"]:before {
+  content: "\f206";
+}
+.social-section a[href*="linkedin.com"]:before {
+  content: "\f207";
+}
+.social-section a[href*="pinterest.com"]:before {
+  content: "\f209";
+}
+.social-section a[href*="flickr.com"]:before {
+  content: "\f211";
+}
+.social-section a[href*="vimeo.com"]:before {
+  content: "\f212";
+}
+.social-section a[href*="youtube.com"]:before {
+  content: "\f213";
+}
+.social-section a[href*="tumblr.com"]:before {
+  content: "\f214";
+}
+.social-section a[href*="instagram.com"]:before {
+  content: "\f215";
+}
+.social-section a[href*="codepen.io"]:before {
+  content: "\f216";
+}
+.social-section a[href*="polldaddy.com"]:before {
+  content: "\f217";
+}
+.social-section a[href*="skype.com"]:before {
+  content: "\f220";
+}
+.social-section a[href*="digg.com"]:before {
+  content: "\f221";
+}
+.social-section a[href*="reddit.com"]:before {
+  content: "\f222";
+}
+.social-section a[href*="stumbleupon.com"]:before {
+  content: "\f223";
+}
+.social-section a[href*="pocket.com"]:before {
+  content: "\f224";
+}
+.social-section a[href*="dropbox.com"]:before {
+  content: "\f225";
+}
+.social-section a[href*="foursquare.com"]:before {
+  content: "\f226";
+}
+
 ul, ol {
   margin: 0 0 1.5em 0.875em;
 }
@@ -606,11 +726,6 @@ dd a {
 
 .head-inner:after {
   clear: both;
-}
-
-.social-section {
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .site-title,
@@ -1022,9 +1137,6 @@ a:focus {
 .main-navigation .current-menu-ancestor > a {
   font-weight: 700;
 }
-.main-navigation .primary-menu {
-  border-bottom: 1px solid #d1d1d1;
-}
 .main-navigation .menu-item-has-children > a {
   margin-right: 56px;
 }
@@ -1110,7 +1222,6 @@ a:focus {
     display: table;
     table-layout: fixed;
   }
-
   .main-navigation ul {
     padding-left: 0;
   }
@@ -1170,11 +1281,11 @@ a:focus {
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-  .main-navigation .primary-menu,
-  .main-navigation .primary-menu > li {
+  .main-navigation ul,
+  .main-navigation ul > li {
     border: 0;
   }
-  .main-navigation .primary-menu > li {
+  .main-navigation ul > li {
     float: left;
   }
   .main-navigation a,
