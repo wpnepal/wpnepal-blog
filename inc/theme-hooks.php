@@ -144,13 +144,13 @@ function wpnepal_blog_add_custom_styling() {
 	// Link color.
 	$wpnepal_blog_link_color = get_theme_mod( 'wpnepal_blog_link_color' );
 	if ( ! empty( $wpnepal_blog_link_color ) ) {
-		$css .= 'a,a:visited{color:' . esc_attr( $wpnepal_blog_link_color ) . ';}';
+		$css .= 'a,a:visited,.posted-on a,.cat-links a,.tags-links a,.author a,.comments-link a,.nav-links .nav-previous a,.nav-links .nav-next a{color:' . esc_attr( $wpnepal_blog_link_color ) . ';}';
 	}
 
 	// Link hover color.
 	$wpnepal_blog_link_hover_color = get_theme_mod( 'wpnepal_blog_link_hover_color' );
 	if ( ! empty( $wpnepal_blog_link_hover_color ) ) {
-		$css .= 'a:hover,a:focus,a:active{color:' . esc_attr( $wpnepal_blog_link_hover_color ) . ';}';
+		$css .= 'a:hover, a:focus, a:active, .site-title a:hover, .site-title a:focus, .main-navigation a:hover, .nav-links .nav-previous a:hover, .nav-links .nav-previous a:focus, .nav-links .nav-next a:hover, .nav-links .nav-next a:focus, .posted-on a:hover, .cat-links a:hover, .tags-links a:hover, .author a:hover, .comments-link a:hover, .edit-link a:hover, .edit-link a:focus, .widget ul li a:hover, .widget ul li a:focus, .widget ul li a:active{color:' . esc_attr( $wpnepal_blog_link_hover_color ) . ';}';
 	}
 
 	if ( ! empty( $css ) ) {
