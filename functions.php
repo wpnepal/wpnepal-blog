@@ -154,11 +154,11 @@ function wpnepal_blog_scripts() {
 
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/third-party/genericons/genericons' . $min . '.css', array(), '3.4.1' );
 
-	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.1' );
+	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.1.0' );
 
 	wp_enqueue_script( 'wpnepal-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $min . '.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'wpnepal-blog-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery' ), '1.1', true );
+	wp_enqueue_script( 'wpnepal-blog-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery' ), '1.1.0', true );
 
 	wp_localize_script( 'wpnepal-blog-custom', 'WPNepalBlogScreenReaderText', array(
 		'expand'   => __( 'expand child menu', 'wpnepal-blog' ),
