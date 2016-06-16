@@ -247,11 +247,25 @@
             }
         }
     }
-    
+
     .dropdown-toggle,
     .main-navigation ul .dropdown-toggle.toggled-on,
     .menu-toggle,
     .site-footer .main-navigation {
         display: none;
     }
+}
+
+.footer-navigation {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		li {
+			display: inline-block;
+			a {
+				margin: 0 3px;
+				padding: 3px;
+			}
+		}
+	}
 }
