@@ -22,3 +22,8 @@ Here are some good ideas for commit messages:
 
 ## Commit Process
 All changes happen through a pull request made by contributors, ideally associated with an issue. After you send your proposed changes, one of the committers will review and test. After that we can merge them in.
+
+When you add a pull request, please also add following details in the description. We will then add those to CONTRIBUTORS.md. This is a running list of all contributors.
+* Full Name
+* WordPress ID
+Example: `John Doe, john-doe`
