@@ -25,26 +25,27 @@
 		}
 
 		// Mobile menu.
-	    $( '#menu-toggle' ).click( function() {
-	        $( '#site-header-menu' ).toggle( 'slow' );
+		$( '#menu-toggle' ).click( function() {
+			$( '#site-header-menu' ).toggle( 'slow' );
 		});
 
-	  	function initMainNavigation( container ) {
-		    // Add dropdown toggle that display child menu items.
-		    container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + WPNepalBlogScreenReaderText.expand + '</button>' );
+		function initMainNavigation( container ) {
 
-		    // Toggle buttons and submenu items with active children menu items.
-		    container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
-		    container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+			// Add dropdown toggle that display child menu items.
+			container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + WPNepalBlogScreenReaderText.expand + '</button>' );
 
-		    container.find( '.dropdown-toggle' ).click( function( e ) {
-		    	var _this = $( this );
-		    	e.preventDefault();
-		    	_this.toggleClass( 'toggle-on' );
-		    	_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
-		    	_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-		    	_this.html( _this.html() === WPNepalBlogScreenReaderText.expand ? WPNepalBlogScreenReaderText.collapse : WPNepalBlogScreenReaderText.expand );
-		    } );
+			// Toggle buttons and submenu items with active children menu items.
+			container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
+			container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+
+			container.find( '.dropdown-toggle' ).click( function( e ) {
+				var _this = $( this );
+				e.preventDefault();
+				_this.toggleClass( 'toggle-on' );
+				_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+				_this.attr( 'aria-expanded', 'false' === _this.attr( 'aria-expanded' ) ? 'true' : 'false' );
+				_this.html( _this.html() === WPNepalBlogScreenReaderText.expand ? WPNepalBlogScreenReaderText.collapse : WPNepalBlogScreenReaderText.expand );
+			} );
 		}
 
 		// Trigger menu.
