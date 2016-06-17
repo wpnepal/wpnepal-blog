@@ -161,8 +161,8 @@ function wpnepal_blog_scripts() {
 	wp_enqueue_script( 'wpnepal-blog-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery' ), '1.1.0', true );
 
 	wp_localize_script( 'wpnepal-blog-custom', 'WPNepalBlogScreenReaderText', array(
-		'expand'   => __( 'expand child menu', 'wpnepal-blog' ),
-		'collapse' => __( 'collapse child menu', 'wpnepal-blog' ),
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'wpnepal-blog' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'wpnepal-blog' ) . '</span>',
 	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
