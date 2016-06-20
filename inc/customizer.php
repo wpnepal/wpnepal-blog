@@ -128,14 +128,46 @@ function wpnepal_blog_customize_register( $wp_customize ) {
 		) )
 	);
 
+	// Partial implementation.
+	if ( isset( $wp_customize->selective_refresh ) ) {
+
+		// Site title.
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'            => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback'     => 'wpnepal_blog_customize_partial_blogname',
+		) );
+
+		// Site tagline.
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'            => '.site-description',
+			'container_inclusive' => false,
+			'render_callback'     => 'wpnepal_blog_customize_partial_blogdescription',
+		) );
+
+		// Header tagline.
+		$wp_customize->get_setting( 'wpnepal_blog_custom_header_tagline' )->transport         = 'postMessage';
+		$wp_customize->selective_refresh->add_partial( 'headertagline', array(
+			'selector'            => '.head-img .head-title',
+			'container_inclusive' => false,
+			'settings'            => array( 'wpnepal_blog_custom_header_tagline' ),
+			'render_callback'     => 'wpnepal_blog_customize_partial_header_tagline',
+		) );
+
+	}
+
 }
+
 add_action( 'customize_register', 'wpnepal_blog_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function wpnepal_blog_customize_preview_js() {
-	wp_enqueue_script( 'wpnepal_blog_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+
+	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	wp_enqueue_script( 'wpnepal-blog-customizer', get_template_directory_uri() . '/js/customizer' . $min . '.js', array( 'customize-preview' ), '1.1.0', true );
+
 }
 add_action( 'customize_preview_init', 'wpnepal_blog_customize_preview_js' );
 
@@ -164,3 +196,42 @@ if ( ! function_exists( 'wpnepal_blog_sanitize_select' ) ) :
 	}
 
 endif;
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @since 1.1.0
+ *
+ * @return void
+ */
+function wpnepal_blog_customize_partial_blogname() {
+
+	bloginfo( 'name' );
+
+}
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @since 1.1.0
+ *
+ * @return void
+ */
+function wpnepal_blog_customize_partial_blogdescription() {
+
+	bloginfo( 'description' );
+
+}
+
+/**
+ * Render the header tagline for the selective refresh partial.
+ *
+ * @since 1.1.0
+ *
+ * @return void
+ */
+function wpnepal_blog_customize_partial_header_tagline() {
+
+	echo get_theme_mod( 'wpnepal_blog_custom_header_tagline' );
+
+}
