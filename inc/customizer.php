@@ -232,6 +232,6 @@ function wpnepal_blog_customize_partial_blogdescription() {
  */
 function wpnepal_blog_customize_partial_header_tagline() {
 
-	echo get_theme_mod( 'wpnepal_blog_custom_header_tagline' );
+	echo esc_html( get_theme_mod( 'wpnepal_blog_custom_header_tagline' ) );
 
 }
