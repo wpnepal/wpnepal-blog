@@ -71,11 +71,11 @@ if ( ! function_exists( 'wpnepal_blog_primary_navigation_fallback' ) ) :
 	 */
 	function wpnepal_blog_primary_navigation_fallback() {
 		echo '<ul>';
-		echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'wpnepal-blog' ). '</a></li>';
+		echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'wpnepal-blog' ) . '</a></li>';
 		wp_list_pages( array(
 			'title_li' => '',
 			'depth'    => 1,
-			'number'   => 8,
+			'number'   => 6,
 		) );
 		echo '</ul>';
 
