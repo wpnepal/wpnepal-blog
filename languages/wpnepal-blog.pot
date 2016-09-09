@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPNepal Blog 1.1.0\n"
+"Project-Id-Version: WPNepal Blog 1.1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/wpnepal/wpnepal-blog/issues\n"
 "POT-Creation-Date: 2016-06-13 15:54:42+00:00\n"
 "MIME-Version: 1.0\n"
@@ -226,7 +226,7 @@ msgstr ""
 
 #: comments.php:31
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
