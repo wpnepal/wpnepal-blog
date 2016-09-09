@@ -139,6 +139,8 @@ module.exports = function( grunt ) {
 					'!.*/**',
 					'!tmp/**',
 					'!Gruntfile.js',
+					'!codesniffer.ruleset.xml',
+					'!CONTRIBUTING.md',
 					'!test.php',
 					'!package.json',
 					'!node_modules/**',
