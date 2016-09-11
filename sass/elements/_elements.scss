@@ -107,6 +107,7 @@ a.scrollup:visited {
       &:before{
         font-family: $font__icon;
         @include font-size(1);
+        content: "\f475";
       }
     }
 
@@ -250,7 +251,7 @@ a.scrollup:visited {
   &:after{
     @include clearfix-after();
   }
-  
+
   .head-titlecontainer {
     width: 100%;
     margin: auto;

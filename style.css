@@ -568,6 +568,7 @@ a.scrollup:visited span {
   font-family: "Genericons";
   font-size: 16px;
   font-size: 1rem;
+  content: "\f475";
 }
 .social-section a[href*="github.com"]:before {
   content: "\f200";
