@@ -93,7 +93,6 @@ if ( ! function_exists( 'wpnepal_blog_setup' ) ) :
 		 */
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-
 	}
 endif;
 add_action( 'after_setup_theme', 'wpnepal_blog_setup' );

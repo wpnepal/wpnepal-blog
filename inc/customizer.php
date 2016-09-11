@@ -60,7 +60,7 @@ function wpnepal_blog_customize_register( $wp_customize ) {
 		array(
 		'default'           => '#565656',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'wpnepal_blog_sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
@@ -79,7 +79,7 @@ function wpnepal_blog_customize_register( $wp_customize ) {
 		array(
 		'default'           => '#919191',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'wpnepal_blog_sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
@@ -98,7 +98,7 @@ function wpnepal_blog_customize_register( $wp_customize ) {
 		array(
 		'default'           => '#000000',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'wpnepal_blog_sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
@@ -176,6 +176,29 @@ if ( ! function_exists( 'wpnepal_blog_sanitize_select' ) ) :
 
 		// If the input is a valid key, return it; otherwise, return the default.
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+	}
+
+endif;
+
+if ( ! function_exists( 'wpnepal_blog_sanitize_hex_color' ) ) :
+
+	/**
+	 * Sanitize hex color.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed                $input The value to sanitize.
+	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
+	 * @return mixed Sanitized value.
+	 */
+	function wpnepal_blog_sanitize_hex_color( $input, $setting ) {
+
+		// Sanitize input.
+		$input = sanitize_hex_color( $input );
+
+		// If $input is a valid hex value, return it; otherwise, return the default.
+		return ( ! null( $input ) ? $input : $setting->default );
 
 	}
 
