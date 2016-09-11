@@ -142,7 +142,7 @@ function wpnepal_blog_add_custom_styling() {
 	// Link color.
 	$wpnepal_blog_link_color = get_theme_mod( 'wpnepal_blog_link_color' );
 	if ( ! empty( $wpnepal_blog_link_color ) ) {
-		$css .= 'a,a:visited,.posted-on a,.cat-links a,.tags-links a,.author a,.comments-link a,.nav-links .nav-previous a,.nav-links .nav-next a{color:' . esc_attr( $wpnepal_blog_link_color ) . ';}';
+		$css .= 'a,a:visited,.posted-on a,.cat-links a,.tags-links a,.author a,.comments-link a,.nav-links .nav-previous a,.nav-links .nav-next a, .widget ul li a,.edit-link a{color:' . esc_attr( $wpnepal_blog_link_color ) . ';}';
 	}
 
 	// Link hover color.
