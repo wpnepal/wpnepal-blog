@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPNepal Blog 1.1.1\n"
+"Project-Id-Version: WPNepal Blog 1.1.2\n"
 "Report-Msgid-Bugs-To: https://github.com/wpnepal/wpnepal-blog/issues\n"
 "POT-Creation-Date: 2016-06-13 15:54:42+00:00\n"
 "MIME-Version: 1.0\n"
@@ -85,15 +85,19 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:119
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:121
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:148
 msgid "expand child menu"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:149
 msgid "collapse child menu"
 msgstr ""
 
@@ -121,7 +125,7 @@ msgstr ""
 msgid "Static front page only"
 msgstr ""
 
-#: inc/customizer.php:43 inc/theme-hooks.php:60
+#: inc/customizer.php:43 inc/theme-hooks.php:56
 msgid "The future will be better tomorrow."
 msgstr ""
 
@@ -129,19 +133,15 @@ msgstr ""
 msgid "Header Tagline"
 msgstr ""
 
-#: inc/customizer.php:66
-msgid "Alt Text"
-msgstr ""
-
-#: inc/customizer.php:87
+#: inc/customizer.php:71
 msgid "Default Color"
 msgstr ""
 
-#: inc/customizer.php:106
+#: inc/customizer.php:90
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:109
 msgid "Link Hover Color"
 msgstr ""
 
@@ -231,7 +231,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:94
+#: functions.php:82
 msgctxt "header image description"
 msgid "Nature"
 msgstr ""

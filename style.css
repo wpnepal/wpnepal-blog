@@ -4,11 +4,11 @@ Theme URI:
 Author: WP Nepal
 Author URI:
 Description: Simple Blog theme
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wpnepal-blog
-Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, theme-options, threaded-comments, blog, editor-style, custom-logo
+Tags: two-columns, right-sidebar, custom-background, custom-header, custom-colors, custom-menu, featured-images, translation-ready, theme-options, threaded-comments, blog, custom-logo
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -568,6 +568,7 @@ a.scrollup:visited span {
   font-family: "Genericons";
   font-size: 16px;
   font-size: 1rem;
+  content: "\f475";
 }
 .social-section a[href*="github.com"]:before {
   content: "\f200";
