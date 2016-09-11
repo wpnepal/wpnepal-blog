@@ -198,7 +198,7 @@ if ( ! function_exists( 'wpnepal_blog_sanitize_hex_color' ) ) :
 		$input = sanitize_hex_color( $input );
 
 		// If $input is a valid hex value, return it; otherwise, return the default.
-		return ( ! null( $input ) ? $input : $setting->default );
+		return ( $input ? $input : $setting->default );
 
 	}
 
