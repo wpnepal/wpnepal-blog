@@ -51,15 +51,13 @@ function wpnepal_blog_add_custom_header() {
 	if ( true !== $custom_header_status ) {
 		return;
 	}
-	$alt_text = get_theme_mod( 'wpnepal_blog_custom_header_alt_text' );
-	if ( empty( $alt_text ) ) {
-		$alt_text = get_bloginfo( 'name', 'display' );
-	}
 	?>
-	<section class="head-img" style="background-image: url(<?php echo esc_url( get_header_image() ); ?>" alt="<?php echo esc_attr( $alt_text ); ?>);">
+	<section class="head-img" style="background-image: url(<?php echo esc_url( get_header_image() ); ?>" >
 		<?php $wpnepal_blog_custom_header_tagline = get_theme_mod( 'wpnepal_blog_custom_header_tagline', __( 'The future will be better tomorrow.', 'wpnepal-blog' ) ); ?>
 		<?php if ( ! empty( $wpnepal_blog_custom_header_tagline ) ) : ?>
-			<div class="head-titlecontainer"><div class="head-title"><?php echo esc_html( $wpnepal_blog_custom_header_tagline ); ?></div></div>
+			<div class="head-titlecontainer">
+				<div class="head-title"><?php echo esc_html( $wpnepal_blog_custom_header_tagline ); ?></div><!-- .head-title -->
+			</div><!-- .head-titlecontainer -->
 		<?php endif; ?>
 	</section>
 	<?php

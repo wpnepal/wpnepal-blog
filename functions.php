@@ -57,18 +57,6 @@ if ( ! function_exists( 'wpnepal_blog_setup' ) ) :
 			'caption',
 		) );
 
-		/*
-		 * Enable support for Post Formats.
-		 * See https://developer.wordpress.org/themes/functionality/post-formats/
-		 */
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-		) );
-
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'wpnepal_blog_custom_background_args', array(
 			'default-color' => 'ffffff',
@@ -105,9 +93,6 @@ if ( ! function_exists( 'wpnepal_blog_setup' ) ) :
 		 */
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// Editor style.
-		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		add_editor_style( 'css/editor-style' . $min . '.css' );
 
 	}
 endif;
@@ -154,7 +139,7 @@ function wpnepal_blog_scripts() {
 
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/third-party/genericons/genericons' . $min . '.css', array(), '3.4.1' );
 
-	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.1.0' );
+	wp_enqueue_style( 'wpnepal-blog-style', get_stylesheet_uri(), array(), '1.1.2' );
 
 	wp_enqueue_script( 'wpnepal-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $min . '.js', array(), '20151215', true );
 

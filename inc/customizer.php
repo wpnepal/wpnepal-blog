@@ -54,22 +54,6 @@ function wpnepal_blog_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'wpnepal_blog_custom_header_alt_text',
-		array(
-		'default'           => '',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-	$wp_customize->add_control( 'wpnepal_blog_custom_header_alt_text',
-		array(
-		'label'    => __( 'Alt Text', 'wpnepal-blog' ),
-		'section'  => 'header_image',
-		'type'     => 'text',
-		'priority' => 100,
-		)
-	);
-
 	// Colors.
 	// Default color.
 	$wp_customize->add_setting( 'wpnepal_blog_default_color',
