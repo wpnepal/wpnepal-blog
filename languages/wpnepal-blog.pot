@@ -85,15 +85,19 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:119
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:121
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:148
 msgid "expand child menu"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:149
 msgid "collapse child menu"
 msgstr ""
 
