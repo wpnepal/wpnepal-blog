@@ -75,7 +75,6 @@ if ( ! function_exists( 'wpnepal_blog_primary_navigation_fallback' ) ) :
 		wp_list_pages( array(
 			'title_li' => '',
 			'depth'    => 1,
-			'number'   => 6,
 		) );
 		echo '</ul>';
 
