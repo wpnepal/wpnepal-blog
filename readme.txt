@@ -3,7 +3,7 @@
 Contributors: wpnepal
 Requires at least: 4.4
 Tested up to: 4.6.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ WPNepal Blog WordPress Theme, Copyright 2016 WPNepal
 WPNepal Blog is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+= 1.1.3 - Sep 12 2016 =
+* Minor bug fixes
 
 = 1.1.2 - Sep 10 2016 =
 * Remove unrelated theme tags
